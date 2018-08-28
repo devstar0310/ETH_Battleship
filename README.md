@@ -2,8 +2,6 @@
 
 Simple battleship game implemented on the ethereum blockchain (solidity).
 
-![Battleship game screenshot](https://raw.githubusercontent.com/eightyfive/eth-battleship/master/screenshot.png)
-
 ## What does it do?
 
 - Player A can create a Battleship game (+ submit `secret` of Player A ships positions)
@@ -72,6 +70,6 @@ Since my project did not require the use of a library, I created a dedicated uni
 Unfortunately I did not have time to do the following:
 
 - Implement the **UI** of the reveal phase (but "reveal" works in Tests !!)
-- Implement the "betting" part of the challenge
+- Implement the "betting" part fo the challenge
 
 
