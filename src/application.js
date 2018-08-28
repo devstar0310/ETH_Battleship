@@ -4,11 +4,10 @@ import { _unshift } from "utils/immutable";
 import BattleshipContract from "../build/contracts/Battleship.json";
 
 export default class Application {
-  constructor(web3, store, accountIndex) {
+  constructor(web3, store) {
     this.web3 = web3;
     this.dispatch = store.dispatch;
     this.account = null;
-    this.accountIndex = accountIndex;
   }
 
   async init() {
@@ -60,18 +59,7 @@ export default class Application {
           reject(err);
         }
 
-        if (!accounts.length) {
-          alert(`
-            No ETH account detected !
-
-            - Is Metamask installed ?
-            - Is Metamask configured to work with Ganache ?
-          `);
-
-          throw new Error("No accounts detected");
-        }
-
-        resolve(accounts[this.accountIndex]);
+        resolve(accounts[0]);
       });
     });
   }
